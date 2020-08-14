@@ -1,0 +1,26 @@
+{
+  "name": "examenmutantesmeli",
+  "version": "1.0.0",
+  "description": "Paquetes para API Mutantes",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.29"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedeGonzalez84/examenMutantesMeli.git"
+  },
+  "author": "Gonzalez Federico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FedeGonzalez84/examenMutantesMeli/issues"
+  },
+  "homepage": "https://github.com/FedeGonzalez84/examenMutantesMeli#readme"
+}
