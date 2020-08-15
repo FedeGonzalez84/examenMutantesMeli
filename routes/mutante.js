@@ -10,6 +10,14 @@ const app = express();
 app.post('/mutant', (req, res) => {
     const dna = req.body.dna;   
     
+    // Valido que el numero de elementos sea correcto
+    if(!validarEntrada(dna)){
+        return res.status(400).json(({
+            ok: "False",
+            message: "La cantidad de elementos en la secuencia es incorrecta"
+        }))
+    }
+
     // Busco si la secuncia no fue cargada previamente
     buscarSecuencia(dna)
         .then( response => {
@@ -70,5 +78,16 @@ const buscarSecuencia = async (dna) => {
     return result;
 }
 // ---------------------------------------------------------------------
+// Valida que la cantidad de elementos en la entrada sea correcta
+const validarEntrada = (dna) => {
+    const longitudDNA = dna.length;
+    if( longitudDNA < 4) return false; // Valido la longitu del array
+    for( let secuencia of dna){
+        if(secuencia.length !== longitudDNA) return false;
+    }
+    return true;
+}
+// ---------------------------------------------------------------------
+
 
 module.exports = app;
