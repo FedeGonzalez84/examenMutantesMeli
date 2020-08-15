@@ -31,7 +31,7 @@ Obtenemos **200-OK**, lo que representa una cadena mutante. <br />
 Para una secuencia humana: <br/>
 ```
 {
-	"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG"]
+	"dna":["ATGC","CAGT","TTAT","AGAA"]
 }
 ```
 La respuesta del servidor será: **403-Forbidden**
