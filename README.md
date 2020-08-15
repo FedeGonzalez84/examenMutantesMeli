@@ -27,4 +27,11 @@ La api posee dos enpoints:
 }
 ```
 Obtenemos **200-OK**, lo que representa una cadena mutante. <br />
-Para el caso en que la secuencia sea humana, la respuesta del servidor será: **403-Forbidden**
+
+Para una secuencia humana: <br/>
+```
+{
+	"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG"]
+}
+```
+La respuesta del servidor será: **403-Forbidden**
