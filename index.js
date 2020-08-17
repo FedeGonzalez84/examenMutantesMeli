@@ -20,14 +20,16 @@ app.use( require('./routes/mutante'));
 
 // ---------------------------------------------------------------------
 // Conectar con mongodb
-mongoose.connect(process.env.URLDB,
+const mongoDB = mongoose.connect(process.env.URLDB,
  {    useNewUrlParser: true,    
       useUnifiedTopology: true},
       (err, res) => { 
           if (err) throw err;    
-    console.log('Base de datos Online');
 }); 
 // ---------------------------------------------------------------------
 // Escuchando el servidor
-app.listen(process.env.PORT, () => {
-    console.log("Escuchando puerto: " + process.env.PORT ); });
+const server = app.listen(process.env.PORT);
+
+// ---------------------------------------------------------------------
+// Exporto para utilizar en tests
+module.exports =  server ;

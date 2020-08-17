@@ -18,7 +18,7 @@ app.post('/mutant', (req, res) => {
         }))
     }
 
-    // Busco si la secuncia no fue cargada previamente
+    // Busco si la secuencia no fue cargada previamente
     buscarSecuencia(dna)
         .then( response => {
             if(response) return res.status(409).json({
