@@ -34,4 +34,11 @@ Para una secuencia humana: <br/>
 	"dna":["ATGC","CAGT","TTAT","AGAA"]
 }
 ```
-La respuesta del servidor será: **403-Forbidden**
+La respuesta del servidor será: **403-Forbidden** <br />
+Para el caso en que se envíe una secuencia ya existente en la base de datos, se obtendrá: <br />
+```
+{
+    "ok": "False",
+    "message": "La secuencia ya se encuentra en la base de datos"
+}
+```
